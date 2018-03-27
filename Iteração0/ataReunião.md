@@ -29,11 +29,13 @@ Data 22/03/2018
 </ul>
 
 <h3>Tasks</h3>
-<table border="1">
+<table border="0">
 <tr><td><b>Ação</b></td> <td><b>Responsável(eis)</b></td> 
 <tr><td>Estudo de APIs</td> <td>Time</td> 
 <tr><td>Treinamento Ruby on Rails</td> <td>Time</td> 
 <tr><td>Análise do Público-Alvo</td> <td>Time</td>
 </table>
+
+
 
 
