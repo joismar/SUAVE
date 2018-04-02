@@ -1,4 +1,4 @@
-## SUAVE - Sistema Unificado de Avaliação e Verificalção do Ensino
+## SUAVE - Sistema Unificado de Avaliação do Ensino
 
 Projeto da disciplina de Engenharia de Software (IF977), ofertada no curso de Sistemas de Informação do Centro de Informática, UFPE.
 
