@@ -36,7 +36,7 @@
 |:----------------------------|:-------------:|
 |Treinamento de Ruby on Rails | Equipe        |
 |Complementar as HU's	      | Jean e Joismar|
-|Ínicio do Desenvolvimento    | Equipe        |
+|Início do Desenvolvimento    | Equipe        |
 |Definir Gems 		      | Hugo e Joismar|
 |Tratamento dos dados 	      | Jean e João   |
 |Realização de testes iniciais| Hugo e João   |
