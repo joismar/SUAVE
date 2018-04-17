@@ -1,13 +1,13 @@
-# SUAVE - Sistema Unificado de Avaliação do Ensino
+### SUAVE - Sistema Unificado de Avaliação do Ensino
 
-# Postmortem - Iteração 0
+### Postmortem - Iteração 0
 
 
 |Início da iteração | Término da iteração|
 |:-----------------:|:------------------:|
 |    26/03/2018     |     16/04/2018	 |
 
-# O que estava planejado
+#### O que estava planejado
 |					Ação | Responsável|
 |:-------------------------------------------|:----------:|
 |Definir o escopo                     	     | Equipe     |
@@ -16,7 +16,7 @@
 |Definir APIs e estudá-las                   | Equipe     |
 |Definir a função de cada integrante do grupo| Equipe     |
 
-# O que foi feito
+#### O que foi feito
 |								Ação | Responsável |
 |:-------------------------------------------------------------------|:-----------:|
 |Definição do escopo                                                 | Equipe      |
@@ -26,12 +26,12 @@
 |Função de cada um no projeto                         		     | Equipe      |
 |Dados brutos (em .csv por exemplo) serão utilizados no lugar de APIs| Equipe      |
 
-# O que não foi feito
+#### O que não foi feito
 |			Ação | Responsável|
 |:---------------------------|:----------:|
 |Treinamento de Ruby on Rails| Equipe     |
 
-# Planejamento para a próxima iteração
+#### Planejamento para a próxima iteração
 |			 Ação | Responsável   |
 |:----------------------------|:-------------:|
 |Treinamento de Ruby on Rails | Equipe        |
@@ -41,7 +41,7 @@
 |Tratamento dos dados 	      | Jean e João   |
 |Realização de testes iniciais| Hugo e João   |
 
-# Lições aprendidas
+#### Lições aprendidas
 * Alocar tarefas pois não é viável todos desenvolverem tudo.
 * Antecipar o cronograma sempre que possível torna o "tempo" extra em conhecimento útil para o projeto.
 
