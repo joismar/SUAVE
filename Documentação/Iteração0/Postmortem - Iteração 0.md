@@ -1,48 +1,48 @@
-# SUAVE - Sistema Unificado de AvaliaÁ„o do Ensino
+# SUAVE - Sistema Unificado de Avalia√ß√£o do Ensino
 
-# Postmortem - IteraÁ„o 0
+# Postmortem - Itera√ß√£o 0
 
 
-InÌcio da iteraÁ„o | TÈrmino da iteraÁ„o
-:-----------------:|:-------------------:
-    26/03/2018     |     16/04/2018
+|In√≠cio da itera√ß√£o | T√©rmino da itera√ß√£o|
+|:-----------------:|:------------------:|
+|    26/03/2018     |     16/04/2018	 |
 
 # O que estava planejado
-					AÁ„o | Respons·vel
-:--------------------------------------------|:-----------:
-Definir o escopo                     	     | Equipe
-Criar os Lo-Fi mockups e storyboards 	     | Equipe
-Atualizar o README                    	     | Hugo
-Definir APIs e estud·-las                    | Equipe
-Definir a funÁ„o de cada integrante do grupo | Equipe
+|					A√ß√£o | Respons√°vel|
+|:-------------------------------------------|:----------:|
+|Definir o escopo                     	     | Equipe     |
+|Criar os Lo-Fi mockups e storyboards 	     | Equipe	  |
+|Atualizar o README                    	     | Hugo       |
+|Definir APIs e estud√°-las                   | Equipe     |
+|Definir a fun√ß√£o de cada integrante do grupo| Equipe     |
 
 # O que foi feito
-								AÁ„o | Respons·vel
-:--------------------------------------------------------------------|:-----------:
-DefiniÁ„o do escopo                                                  | Equipe
-ElaboraÁ„o inicial das HistÛrias de Usu·rio 			     | Equipe
-CriaÁ„o dos Lo-Fi mockups e storyboards     			     | Equipe
-AtualizaÁ„o do README                       			     | Hugo
-FunÁ„o de cada um no projeto                         		     | Equipe
-Dados brutos (em .csv por exemplo) ser„o utilizados no lugar de APIs | Equipe
+|								A√ß√£o | Respons√°vel |
+|:-------------------------------------------------------------------|:-----------:|
+|Defini√ß√£o do escopo                                                 | Equipe      |
+|Elabora√ß√£o inicial das Hist√≥rias de Usu√°rio 			     | Equipe      |
+|Cria√ß√£o dos Lo-Fi mockups e storyboards     			     | Equipe      |
+|Atualiza√ß√£o do README                       			     | Hugo        |
+|Fun√ß√£o de cada um no projeto                         		     | Equipe      |
+|Dados brutos (em .csv por exemplo) ser√£o utilizados no lugar de APIs| Equipe      |
 
-# O que n„o foi feito
-			AÁ„o | Respons·vel
-:----------------------------|:-----------:
-Treinamento de Ruby on Rails | Equipe
+# O que n√£o foi feito
+|			A√ß√£o | Respons√°vel|
+|:---------------------------|:----------:|
+|Treinamento de Ruby on Rails| Equipe     |
 
-# Planejamento para a prÛxima iteraÁ„o
-			AÁ„o | Respons·vel
-:----------------------------|:-----------:
-Treinamento de Ruby on Rails | Equipe
-Complementar as HU's	     | Jean e Joismar
-Õnicio do Desenvolvimento    | Equipe
-Definir Gems 		     | Hugo e Joismar
-Tratamento dos dados 	     | Jean e Jo„o
-RealizaÁ„o de testes iniciais| Hugo e Jo„o
+# Planejamento para a pr√≥xima itera√ß√£o
+|			 A√ß√£o | Respons√°vel   |
+|:----------------------------|:-------------:|
+|Treinamento de Ruby on Rails | Equipe        |
+|Complementar as HU's	      | Jean e Joismar|
+|√çnicio do Desenvolvimento    | Equipe        |
+|Definir Gems 		      | Hugo e Joismar|
+|Tratamento dos dados 	      | Jean e Jo√£o   |
+|Realiza√ß√£o de testes iniciais| Hugo e Jo√£o   |
 
-# LiÁıes aprendidas
-* Alocar tarefas pois n„o È vi·vel todos desenvolverem tudo.
-* Antecipar o cronograma sempre que possÌvel torna o "tempo" extra em conhecimento ˙til para o projeto.
+# Li√ß√µes aprendidas
+* Alocar tarefas pois n√£o √© vi√°vel todos desenvolverem tudo.
+* Antecipar o cronograma sempre que poss√≠vel torna o "tempo" extra em conhecimento √∫til para o projeto.
 
 
