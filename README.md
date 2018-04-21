@@ -9,7 +9,7 @@ Diante da difilculdade de acesso a informações necessárias para avaliar a qua
 Uma aplicação web que dispõe de um ranking das escolas do Brasil, com o objetivo de auxiliar a escolha da instituição de ensino que melhor se adequa aos interesses e necessidades do aluno. Os dados extraídos estão disponíveis no portal de Microdados do [INEP](http://portal.inep.gov.br/microdados).
 
 #### Equipe
-* Jean Silva ([@Jcns](https://github.com/Jcns))
-* João Paulo ([@jpos92](https://github.com/jpos92))
-* Joismar Braga ([@joismar](https://github.com/joismar))
-* Hugo Oliveira ([@holivra](https://github.com/holivra))
+* Jean Silva - Desenvolvedor([@Jcns](https://github.com/Jcns))
+* João Paulo - Desenvolvedor([@jpos92](https://github.com/jpos92))
+* Joismar Braga - Product Owner([@joismar](https://github.com/joismar))
+* Hugo Oliveira - Desenvolvedor([@holivra](https://github.com/holivra))
