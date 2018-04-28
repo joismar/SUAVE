@@ -13,3 +13,14 @@
  *= require_self
  *= require_tree .
  */
+.navbar-nav li a {
+  line-height: 25px !important;
+}
+
+.navbar-brand {
+  line-height: 25px !important;
+}
+
+.btn-login {
+  padding: 10px !important;
+}

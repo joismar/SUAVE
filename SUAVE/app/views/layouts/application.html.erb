@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <div class="theme-page">
+    <div id="inicio" class="theme-page">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -25,16 +25,62 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/inicial">SUAVE</a>
+            <a class="navbar-brand" href="/">SUAVE</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="">Sobre</a></li>
+              <li><a href="">INICIO</a></li>
+              <li><a href="">ESCOLAS</a></li>
+              <li><a href="">ESTATISTICAS</a></li>
+              <li><a href="">SOBRE</a></li>
+              <li><a class="btn-login" href=""><button type="button" class="btn btn-danger">Login</button></a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
-    <%= yield %>
-  </div>
+      <%= yield %>
+    </div>
+    <footer class="container-fluid text-center">
+      <a href="#inicio" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>SUAVE - Centro de Informática, CIn</p>
+    </footer>
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 900, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        $(window).scroll(function() {
+          $(".slideanim").each(function(){
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+              if (pos < winTop + 600) {
+                $(this).addClass("slide");
+              }
+          });
+        });
+      })
+    </script>
   </body>
 </html>

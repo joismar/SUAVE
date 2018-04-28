@@ -4,7 +4,7 @@
 
 .theme-page {
 
-	padding-top: 70px;
+	padding-top: 60px;
 
 	.theme-dropdown .dropdown-menu {
     position: static;
@@ -15,4 +15,15 @@
   .theme-showcase > p > .btn {
     margin: 5px 0;
   }
+}
+
+.container.theme-showcase {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron.text-center.pesquisa {
+    padding-bottom: 70px;
 }
