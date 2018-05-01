@@ -29,7 +29,7 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="">INICIO</a></li>
+              <li><a href="/">INICIO</a></li>
               <li><a href="">ESCOLAS</a></li>
               <li><a href="">ESTATISTICAS</a></li>
               <li><a href="">SOBRE</a></li>
@@ -41,7 +41,7 @@
       <%= yield %>
     </div>
     <footer class="container-fluid text-center">
-      <a href="#inicio" title="To Top">
+      <a href="#inicio" title="Subir">
         <span class="glyphicon glyphicon-chevron-up"></span>
       </a>
       <p>SUAVE - Centro de Informática, CIn</p>
@@ -49,7 +49,7 @@
     <script>
       $(document).ready(function(){
         // Add smooth scrolling to all links in navbar + footer link
-        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+        $(".navbar a, footer a[href='#inicio']").on('click', function(event) {
           // Make sure this.hash has a value before overriding default behavior
           if (this.hash !== "") {
             // Prevent default anchor click behavior
