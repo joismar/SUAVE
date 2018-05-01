@@ -32,6 +32,10 @@ gem 'bootstrap-sass'
 gem 'sprockets'
 gem 'jquery-rails'
 
+#Login
+
+gem 'devise'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
