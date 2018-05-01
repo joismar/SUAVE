@@ -26,11 +26,27 @@
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #222;
-    color: #999;
-    padding: 10px 0 0 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #222;
+  color: #999;
+  padding: 10px 0 0 0;
+}
+
+.login {
+  margin-bottom: 10px;
+}
+
+.btn-login {
+  width: 100% !important;
+}
+
+.new_user {
+  margin-bottom: 10px;
+}
+
+.jumb-login {
+  padding-bottom: 60px !important;
 }
