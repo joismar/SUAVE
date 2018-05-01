@@ -34,7 +34,6 @@
 #### Planejamento para a próxima iteração
 |			 Ação | Responsável   |
 |:----------------------------|:-------------:|
-|Reunião da Equipe  | Equipe        |
 |Tratamento dos dados 	      | Jean e João   |
 |Planejamento da próxima iteração | Equipe|
 |Finalizar identidade visual| Equipe|
