@@ -1,6 +1,6 @@
 ### SUAVE - Sistema Unificado de Avaliação do Ensino
 
-### Postmortem - Iteração 0
+### Postmortem - Iteração 1
 
 
 |Início da iteração | Término da iteração|
@@ -35,7 +35,6 @@
 |			 Ação | Responsável   |
 |:----------------------------|:-------------:|
 |Tratamento dos dados 	      | Jean e João   |
-|Planejamento da próxima iteração | Equipe|
 |Finalizar identidade visual| Equipe|
 |Criação de mais testes| Hugo e João|
 
