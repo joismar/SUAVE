@@ -13,6 +13,27 @@
  *= require_self
  *= require_tree .
  */
+body::after {
+  background-image: asset-data-url('background.jpg');
+  background-repeat: repeat;
+  background-size: 20%;
+  opacity: .7;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  content: "";
+}
+
+.jumbotron {
+  -webkit-box-shadow: 0px 3px 14px -5px rgba(0,0,0,0.61);
+  -moz-box-shadow: 0px 3px 14px -5px rgba(0,0,0,0.61);
+  box-shadow: 0px 3px 14px -5px rgba(0,0,0,0.61);
+}
+
 .navbar-nav li a {
   line-height: 25px !important;
 }
@@ -50,3 +71,5 @@ footer {
 .jumb-login {
   padding-bottom: 60px !important;
 }
+
+
