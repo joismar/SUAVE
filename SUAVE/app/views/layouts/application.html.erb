@@ -25,14 +25,14 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">SUAVE</a>
+            <%= link_to "SUAVE", root_path, class: "navbar-brand" %>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="">INICIO</a></li>
+              <li><%= link_to "INICIO", root_path %></li>
               <li><a href="">ESCOLAS</a></li>
               <li><a href="">ESTATISTICAS</a></li>
-              <li><a href="">SOBRE</a></li>
+              <li><%= link_to "SOBRE", sobre_path %></li>
               <li><a class="btn-login" href=""><button type="button" class="btn btn-danger">Login</button></a></li>
             </ul>
           </div><!--/.nav-collapse -->
