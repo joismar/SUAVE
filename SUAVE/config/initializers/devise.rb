@@ -6,7 +6,7 @@ Devise.setup do |config|
   config.omniauth :github, '8bb8f79b557f8a5f1c70', '16a20685ba9df11c2b42face9010564b8280c2f6', :scope => 'user:email'
   config.omniauth :google_oauth2, '458624914627-7adcggu86062vmbdofgfn0q16bkpb2vj.apps.googleusercontent.com', 'En0PXDXoD7DU8FZ3M0vvPBD5', {
 :name => "google",
-:scope => "email, profile, plus.me, http://gdata.google.com",
+:scope => "email, profile, plus.me",
 :prompt => "select_account",
 :image_aspect_ratio => "square",
 :image_size => 50,
