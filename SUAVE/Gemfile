@@ -30,7 +30,6 @@ gem 'jbuilder', '~> 2.5'
 # Integrando bootstrap
 gem 'bootstrap-sass'
 gem 'sprockets'
-gem 'jquery-rails'
 
 #Login
 
@@ -62,6 +61,8 @@ end
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'capybara'
+  gem 'capybara-webkit'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
