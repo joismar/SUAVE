@@ -31,8 +31,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'sprockets'
 
-#Login
+# Dados externos
+gem 'httparty'
 
+#Login
 gem 'devise'
 gem "omniauth-google-oauth2", "~> 0.2.1"
 gem "omniauth-github"
