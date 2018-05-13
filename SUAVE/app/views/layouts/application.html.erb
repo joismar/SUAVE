@@ -33,7 +33,17 @@
               <li><a href="">ESCOLAS</a></li>
               <li><a href="">ESTATISTICAS</a></li>
               <li><%= link_to "SOBRE", sobre_path %></li>
-              <li><a class="btn-login" href=""><button type="button" class="btn btn-danger">Login</button></a></li>
+              <% if user_signed_in? %> 
+                <div class="login-right">
+                  <p class="login-text">Logado como:</p>
+                  <p class="login-email-text"><strong><%= current_user.email %></strong></p>
+                </div>
+                <li><%= link_to edit_user_registration_path, :class => 'btn-login' do %><button type="button" class="btn btn-danger">Editar perfil</button><% end %></li>
+                <li><%= link_to destroy_user_session_path, method: :delete, :class => 'btn-login' do %><button type="button" class="btn btn-danger">Sair</button><% end %></li>
+              <% else %>
+                <li><%= link_to new_user_registration_path, :class => 'btn-login' do %><button type="button" class="btn btn-danger">Registrar-se</button><% end %></li>
+                <li><%= link_to new_user_session_path, :class => 'btn-login' do %><button type="button" class="btn btn-danger">Login</button><% end %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
