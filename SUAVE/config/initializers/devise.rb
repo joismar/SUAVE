@@ -4,6 +4,14 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   config.omniauth :github, '8bb8f79b557f8a5f1c70', '16a20685ba9df11c2b42face9010564b8280c2f6', :scope => 'user:email'
+  config.omniauth :google_oauth2, '458624914627-7adcggu86062vmbdofgfn0q16bkpb2vj.apps.googleusercontent.com', 'En0PXDXoD7DU8FZ3M0vvPBD5', {
+:name => "google",
+:scope => "email, profile, plus.me, http://gdata.google.com",
+:prompt => "select_account",
+:image_aspect_ratio => "square",
+:image_size => 50,
+:skip_jwt => true
+}
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
