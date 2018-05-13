@@ -35,6 +35,8 @@ gem 'jquery-rails'
 #Login
 
 gem 'devise'
+gem "omniauth-google-oauth2", "~> 0.2.1"
+gem "omniauth-github"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
