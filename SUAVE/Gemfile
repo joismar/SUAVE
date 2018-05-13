@@ -32,8 +32,10 @@ gem 'bootstrap-sass'
 gem 'sprockets'
 gem 'jquery-rails'
 
-#Login
+# Dados externos
+gem 'httparty'
 
+#Login
 gem 'devise'
 
 # Use Capistrano for deployment

@@ -16,11 +16,41 @@
             <% end %>
           </form>
       </div>
-    </div>
 
-    <div class="col-md-12">
-      <h3>Resultados:</h3>
-      <p><%= @termo %></p>
+      <div class="jumbotron">
+      <% if @escolas  != nil %>
+        <p><%= @escolas[0].to_s + " escolas encontradas com a palavra " + @termo =%></p>
+
+        <h2>Lista de Escolas</h2>
+
+        <table align="center">
+          <thead>
+          <tr>
+            <th>Nome &emsp;</th>
+            <th>Cidade &emsp;</th>
+            <th>Estado &emsp;</th>
+            <th>Região &emsp;</th>
+            <th>Situação &emsp;</th>
+            <th>Dependência Adm. &emsp;</th>
+          </tr>
+          </thead>
+
+          <tbody>
+            <% @escolas[1].each do |escola| %>
+              <tr>
+                <td><%= escola["nome"] =%></td>
+                <td><%= escola["cidade"] =%></td>
+                <td><%= escola["estado"] =%></td>
+                <td><%= escola["regiao"] =%></td>
+                <td><%= escola["situacaoFuncionamentoTxt"] =%></td>
+                <td><%= escola["dependenciaAdministrativaTxt"] =%></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <br>
+      <%end%>
+    </div>
 
     </div>
   </div>
