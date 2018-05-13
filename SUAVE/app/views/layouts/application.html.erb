@@ -15,6 +15,8 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <div id="inicio" class="theme-page">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -33,7 +35,7 @@
               <li><a href="">ESCOLAS</a></li>
               <li><a href="">ESTATISTICAS</a></li>
               <li><%= link_to "SOBRE", sobre_path %></li>
-              <% if user_signed_in? %> 
+              <% if user_signed_in? %>
                 <div class="login-right">
                   <p class="login-text">Logado como:</p>
                   <p class="login-email-text"><strong><%= current_user.email %></strong></p>
