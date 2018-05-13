@@ -30,13 +30,14 @@ gem 'jbuilder', '~> 2.5'
 # Integrando bootstrap
 gem 'bootstrap-sass'
 gem 'sprockets'
-gem 'jquery-rails'
 
 # Dados externos
 gem 'httparty'
 
 #Login
 gem 'devise'
+gem "omniauth-google-oauth2", "~> 0.2.1"
+gem "omniauth-github"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -62,6 +63,8 @@ end
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'capybara'
+  gem 'capybara-webkit'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
