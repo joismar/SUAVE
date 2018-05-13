@@ -18,6 +18,12 @@
   }
 }
 
+.container.theme-showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .jumbotron.text-center.pesquisa {
     padding-bottom: 70px;
 }
