@@ -3,6 +3,6 @@ Então /^devo ver a mensagem "(.*?)"$/ do |mensagem|
 end
 
 Então /^devo ser redirecionado para página inicial$/ do
-  expect(root_path)
+  have_current_path(root_path)
 end
 

@@ -1,9 +1,9 @@
 Quando /^clicar no botão "(.*?)"$/ do |botao|
-  find_button(botao).click
+  click_button(botao)
   save_and_open_page
 end
 
 Quando /^eu preencher todos os campos de login$/ do
-  fill_in "email_field", :with=> "testonildo@teste.com"
-  fill_in "password_field", :with=> "123456"
+  fill_in "user_email", :with=> "testonildo@teste.com"
+  fill_in "user_password", :with=> "123456"
 end
