@@ -7,9 +7,11 @@ class HomeController < ApplicationController
   def index
     
     if params[:palavra].nil?
+      @pesquisa_ativa = false
       #FazNada
     else
       @termo = I18n.transliterate(params[:palavra])
+      @pesquisa_ativa = true
       pesquisar()
     end
   
