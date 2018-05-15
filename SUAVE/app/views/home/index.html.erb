@@ -8,7 +8,7 @@
           <form>
             <%= form_tag({controller: "home", action: "index"}) do %>
             <div class="input-group">
-              <%= text_field_tag :palavra, params[:palavra], class: 'form-control', size:'50', placeholder:'Digite o nome da escola...', :require => true %>
+              <%= text_field_tag :palavra, params[:palavra], class: 'form-control', size:'50', placeholder:'Digite o nome da escola...', :required => true %>
                 <div class="input-group-btn">
               <%= submit_tag "Buscar Escola", class:'btn btn-danger' %>
               </div>
