@@ -3,13 +3,11 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.omniauth :github, '8bb8f79b557f8a5f1c70', '16a20685ba9df11c2b42face9010564b8280c2f6', :scope => 'user:email'
+  config.omniauth :github, '8bb8f79b557f8a5f1c70', '16a20685ba9df11c2b42face9010564b8280c2f6', :scope => ['user:email', 'read:user']
   config.omniauth :google_oauth2, '458624914627-7adcggu86062vmbdofgfn0q16bkpb2vj.apps.googleusercontent.com', 'En0PXDXoD7DU8FZ3M0vvPBD5', {
 :name => "google",
-:scope => ["email","profile","plus.login","plus.me"],
+:scope => ["email","profile"],
 :prompt => "select_account",
-:image_aspect_ratio => "square",
-:image_size => 50,
 :skip_jwt => true
 }
   # The secret key used by Devise. Devise uses this key to generate
@@ -27,7 +25,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  # config.mailer_sender = 'noreply.suave@gmail.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
