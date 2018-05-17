@@ -3,13 +3,11 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.omniauth :github, '8bb8f79b557f8a5f1c70', '16a20685ba9df11c2b42face9010564b8280c2f6', :scope => 'user:email'
+  config.omniauth :github, '8bb8f79b557f8a5f1c70', '16a20685ba9df11c2b42face9010564b8280c2f6', :scope => ['user:email', 'read:user']
   config.omniauth :google_oauth2, '458624914627-7adcggu86062vmbdofgfn0q16bkpb2vj.apps.googleusercontent.com', 'En0PXDXoD7DU8FZ3M0vvPBD5', {
 :name => "google",
-:scope => ["email","profile","plus.login","plus.me"],
+:scope => ["email","profile"],
 :prompt => "select_account",
-:image_aspect_ratio => "square",
-:image_size => 50,
 :skip_jwt => true
 }
   # The secret key used by Devise. Devise uses this key to generate
@@ -27,10 +25,10 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'noreply.suave@gmail.com'
 
   # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
+  config.mailer = 'Devise::Mailer'
 
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
@@ -182,7 +180,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+  config.timeout_in = 7.minutes
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
@@ -222,7 +220,7 @@ Devise.setup do |config|
 
   # When set to false, does not sign a user in automatically after their password is
   # reset. Defaults to true, so a user is signed in automatically after a reset.
-  config.sign_in_after_reset_password = true
+  config.sign_in_after_reset_password = false
 
   # ==> Configuration for :encryptable
   # Allow you to use another hashing or encryption algorithm besides bcrypt (default).
