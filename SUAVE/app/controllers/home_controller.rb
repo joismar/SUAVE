@@ -26,7 +26,7 @@ class HomeController < ApplicationController
 
     dados = HTTParty.get(@url)
     @escolas = JSON.parse(dados.body)
-    puts @escolas
+    @paginacao = Kaminari.paginate_array(@escolas[1]).page(params[:page]).per(20)
 
   end
 end

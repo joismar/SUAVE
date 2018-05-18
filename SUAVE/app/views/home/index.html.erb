@@ -22,6 +22,7 @@
             <p><%= @escolas[0].to_s + " escola(s) encontrada(s) com a(s) palavra(s) " + @termo =%></p>
             <h2>Lista de Escolas</h2>
             <div class="table-responsive">
+              <%= paginate @paginacao, :window => 2 %>
               <table align="center" class="table">
                 <thead>
                 <tr>
@@ -34,7 +35,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                  <% @escolas[1].each do |escola| %>
+                  <% @paginacao.each do |escola| %>
                     <tr>
                       <td><%= escola["nome"] =%></td>
                       <td><%= escola["cidade"] =%></td>
@@ -46,6 +47,8 @@
                   <% end %>
                 </tbody>
               </table>
+              <%= paginate @paginacao %><br>
+              <%= page_entries_info @paginacao %>
             </div>
             <br>
           <% end %>
