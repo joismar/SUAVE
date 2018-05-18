@@ -37,7 +37,7 @@
               <li><%= link_to "SOBRE", sobre_path %></li>
               <% if user_signed_in? %>
                 <div class="login-right">
-                  <p class="login-text">Logado como:</p>
+                  <p class="login-text">Bem-vindo:</p>
                   <p class="login-email-text"><strong><%= current_user.name %></strong></p>
                 </div>
                 <li><%= link_to edit_user_registration_path, :class => 'btn-login' do %><button type="button" class="btn btn-danger">Editar perfil</button><% end %></li>
