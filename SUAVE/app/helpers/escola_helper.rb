@@ -1,0 +1,2 @@
+module EscolaHelper
+end
