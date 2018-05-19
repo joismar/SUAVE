@@ -13,20 +13,16 @@
  *= require_self
  *= require_tree .
  */
-body::after {
+body {
   background-image: asset-data-url('background.jpg');
   background-repeat: repeat;
-  background-size: 20%;
-  opacity: .7;
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-  height: 100%;
-  content: "";
+  background-size: 15%;
+}
+
+.container.theme-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .jumbotron {
