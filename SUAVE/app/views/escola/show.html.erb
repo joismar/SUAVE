@@ -1,0 +1,29 @@
+<div class="container theme-showcase" role="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron">
+        <h1><%= @informacao["nome"] =%></h1>
+        <table align="center" class="table">
+          <thead>
+          <tr>
+            <th>Português &emsp;</th>
+            <th>Matematica &emsp;</th>
+            <th>Humanas &emsp;</th>
+            <th>Naturais &emsp;</th>
+            <th>Redação &emsp;</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= @informacao["enemPortugues"] =%></td>
+              <td><%= @informacao["enemMatematica"] =%></td>
+              <td><%= @informacao["enemHumanas"] =%></td>
+              <td><%= @informacao["enemNaturais"] =%></td>
+              <td><%= @informacao["enemRedacao"] =%></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>>
+    </div>
+  </div>
+</div>

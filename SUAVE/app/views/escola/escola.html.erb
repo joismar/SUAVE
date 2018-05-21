@@ -1,0 +1,59 @@
+<div class="container theme-showcase" role="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron text-center pesquisa">
+        <h1>SUAVE</h1>
+        <p>Sistema Unificado de Avaliação de Ensino</p>
+        <p class="home-desc">Uma aplicação web que dispõe de um ranking das escolas do Brasil, com o objetivo de auxiliar a escolha da instituição de ensino que melhor se adequa aos interesses e necessidades do aluno. Começe pesquisando uma escola do seu interesse abaixo, ou consulte a lista de escolas.<p>
+        <form>
+          <%= form_tag({controller: "escola", action: "escola"}) do %>
+            <div class="input-group">
+              <%= text_field_tag :palavra, params[:palavra], class: 'form-control', size:'50', placeholder:'Digite o nome da escola...', :required => true, :pattern => '[a-z|A-Z|0-9|\s]{4,50}' %>
+              <div class="input-group-btn">
+                <%= submit_tag "Buscar Escola", class:'btn btn-danger' %>
+              </div>
+            </div>
+          <% end %>
+        </form>
+      </div>
+      <% if @pesquisa_ativa %>
+        <div class="jumbotron">
+          <% if @escolas != nil %>
+            <p><%= @escolas[0].to_s + " escola(s) encontrada(s) com a(s) palavra(s) " + params[:palavra] =%></p>
+            <h2>Lista de Escolas</h2>
+            <div class="table-responsive">
+              <%= paginate @paginacao %>
+              <table align="center" class="table">
+                <thead>
+                <tr>
+                  <th>Nome &emsp;</th>
+                  <th>Cidade &emsp;</th>
+                  <th>Estado &emsp;</th>
+                  <th>Região &emsp;</th>
+                  <th>Situação &emsp;</th>
+                  <th>Dependência Adm. &emsp;</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% @paginacao.each do |escola| %>
+                  <tr>
+                    <td><%= link_to "#{escola["nome"]}", controller: "escola", action: "show", id: escola["cod"]%></td>
+                    <td><%= escola["cidade"] =%></td>
+                    <td><%= escola["estado"] =%></td>
+                    <td><%= escola["regiao"] =%></td>
+                    <td><%= escola["situacaoFuncionamentoTxt"] =%></td>
+                    <td><%= escola["dependenciaAdministrativaTxt"] =%></td>
+                  </tr>
+                <% end %>
+                </tbody>
+              </table>
+              <%= paginate @paginacao %><br>
+              <%= page_entries_info @paginacao %>
+            </div>
+            <br>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
