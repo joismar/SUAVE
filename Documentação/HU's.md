@@ -46,8 +46,8 @@ Para que eu possa verificar em números a discrepância das escolas
 ### 7 - Esquecer a Senha
 ```
 Como usuário cadastrado da aplicação
-Eu gostaria de mudar minha senha após esquecer
-Para que eu possa ter acesso ao conteúdo destinado aos usuários cadastrados
+Eu gostaria de mudar minha senha, com o e-mail, após esquecer
+Para que eu continue tendo acesso ao conteúdo destinado aos usuários cadastrados
 ```
 
 ### 8 - Optar por modos de login
