@@ -15,3 +15,12 @@ pt-BR:
           other: "Exibindo <b>%{count}</b>"
       more_pages:
         display_entries: "Exibindo <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b> no total"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "- Campo de e-mail está em branco."
+            password:
+              blank: "- Campo de senha está em branco."
