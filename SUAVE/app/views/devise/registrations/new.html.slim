@@ -12,8 +12,8 @@
           .field
             = f.label :password
             - if @minimum_password_length
-              .alert.alert-danger.pass role="alert"
-                | (Mínimo #{@minimum_password_length} caracteres)
+              .alert.alert-warning.pass.text-center role="alert"
+                | Mínimo #{@minimum_password_length} caracteres
             br
             = f.password_field :password, autocomplete: "off", class: "form-control login", placeholder: "Senha"
           .field
