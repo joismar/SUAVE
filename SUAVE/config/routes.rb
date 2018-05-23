@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   get 'home/index'
   post 'home/index'
   root 'home#index'
