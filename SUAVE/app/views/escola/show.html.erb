@@ -27,6 +27,14 @@
     </div>
     <div class="jumbotron sidebar col-md-3">
       <h3>Avaliação:</h3>
+        <% @avaliacoes.each do |avaliacao| %>
+          <% if (avaliacao.idEscola).to_i == (@informacao["cod"]).to_i %>
+          <% nota = avaliacao.nota %>
+            <h3><%= nota =%></h3>
+
+          <%end%>
+        <%end%>
+
     </div>
   </div>
 </div>
