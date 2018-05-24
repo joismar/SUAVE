@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get "sobre", to: "sobre#sobre"
   get "escola", to: "escola#escola"
   devise_for :users, :controllers => { omniauth_callbacks: "users/omniauth_callbacks", registrations: 'users/registrations' }
+
+  #contatos
+  get "contacts", to: "contacts#new"
+  resources "contacts", only: [:new, :create]
 end
