@@ -15,6 +15,9 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
+    @id_escola = params[:id_escola]
+    @nome_escola = params[:nome_escola]
+
     @review = Review.new
   end
 
@@ -30,7 +33,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
+        format.html { redirect_to @review, notice: 'Obrigado pela sua avaliação!' }
         format.json { render :show, status: :created, location: @review }
       else
         format.html { render :new }

@@ -35,7 +35,7 @@
           <%end%>
         <%end%>
 
-        <%= link_to reviews_path do %>
+        <%= link_to controller: "reviews", action: "new", id_escola: @informacao["cod"], nome_escola: @informacao["nome"] do %>
           <%= content_tag :span, "Avaliar Escola", :class => "btn btn-danger" %>
         <% end %>
 
