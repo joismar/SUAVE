@@ -56,3 +56,10 @@ Como usuário visitante da aplicação
 Eu gostaria de ter opção de login com o Gmail
 Para que facilite e agilize meu cadastro
 ```
+
+### 9 - Localização das escolas
+```
+Como usuário visitante da aplicação
+Eu gostaria de ter o endereço e a localização da escola pesquisada
+Para que eu possa me situar geograficamente
+```
