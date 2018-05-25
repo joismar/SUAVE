@@ -1,5 +1,6 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Entrar", new_session_path(resource_name) %><br />
+  <p>Já possui conta?</p>
+  <%= link_to "Entrar", new_session_path(resource_name), class: "btn btn-success btn-login" %><br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
