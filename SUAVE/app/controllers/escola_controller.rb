@@ -27,6 +27,8 @@ class EscolaController < ApplicationController
 
   def show
 
+    @avaliacoes = Review.all
+
     # Montando Url para acessar a API
     url = "http://educacao.dadosabertosbr.com/api/escola/#{params[:id]}"
 
