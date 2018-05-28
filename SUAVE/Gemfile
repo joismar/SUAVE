@@ -80,4 +80,3 @@ gem 'kaminari'
 
 #Contato
 gem 'mail_form'
-gem 'simple_form'
