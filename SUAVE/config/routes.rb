@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'home/index'
   post 'home/index'
   root 'home#index'
+  post 'escola/escola'
   get '/escola/:id' => "escola#show"
   get "sobre", to: "sobre#sobre"
   get "escola", to: "escola#escola"
