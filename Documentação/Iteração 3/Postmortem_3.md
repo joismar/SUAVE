@@ -44,5 +44,5 @@
 |Elaborar um vídeo no formato screencast	 | João e Jean   |
 
 #### Lições aprendidas
-* Muito tempo livre e sem contato dispersa o grupo
+* Falta de contato presencial dispersa o grupo
 * É necessário maturidade do grupo para saber o que é o melhor para o projeto
