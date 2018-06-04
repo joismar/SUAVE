@@ -19,6 +19,19 @@ body {
   background-size: 15%;
 }
 
+body a{
+  color: #467E7F;
+  text-decoration: none;
+}
+
+body a:hover{
+  color: white;
+  text-decoration: none;
+  background: #467E7F;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
 .container.theme-showcase {
   display: flex;
   align-items: center;

@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <div class="jumbotron text-center pesquisa">
         <h1>SUAVE</h1>
-        <p>Sistema Unificado de Avaliação de Ensino</p>
+        <h4>Sistema Unificado de Avaliação de Ensino</h4>
         <p class="home-desc">Uma aplicação web que dispõe de um ranking das escolas do Brasil, com o objetivo de auxiliar a escolha da instituição de ensino que melhor se adequa aos interesses e necessidades do aluno. Começe pesquisando uma escola do seu interesse abaixo, ou consulte a lista de escolas.<p>
         <form>
           <%= form_tag({controller: "escola", action: "escola"}) do %>
@@ -19,11 +19,11 @@
       <% if @pesquisa_ativa %>
         <div class="jumbotron">
           <% if @escolas != nil %>
-            <p><%= @escolas[0].to_s + " escola(s) encontrada(s) com a(s) palavra(s) " + params[:palavra] =%></p>
+            <p><%= @escolas[0].to_s + " escola(s) encontrada(s) com o(s) termos(s) " + "\"#{params[:palavra]}\"" =%></p>
             <h2>Lista de Escolas</h2>
             <div class="table-responsive">
               <%= paginate @paginacao %>
-              <table align="center" class="table">
+              <table align="center" class="table table-striped table-hover">
                 <thead>
                 <tr>
                   <th>Nome &emsp;</th>
@@ -35,16 +35,16 @@
                 </tr>
                 </thead>
                 <tbody>
-                <% @paginacao.each do |escola| %>
-                  <tr>
-                    <td><%= link_to "#{escola["nome"]}", controller: "escola", action: "show", id: escola["cod"]%></td>
-                    <td><%= escola["cidade"] =%></td>
-                    <td><%= escola["estado"] =%></td>
-                    <td><%= escola["regiao"] =%></td>
-                    <td><%= escola["situacaoFuncionamentoTxt"] =%></td>
-                    <td><%= escola["dependenciaAdministrativaTxt"] =%></td>
-                  </tr>
-                <% end %>
+                  <% @paginacao.each do |escola| %>
+                      <tr>
+                        <td><%= link_to "#{escola["nome"].truncate(40)}", controller: "escola", action: "show", id: escola["cod"]%></td>
+                        <td><%= escola["cidade"] =%></td>
+                        <td><%= escola["estado"] =%></td>
+                        <td><%= escola["regiao"] =%></td>
+                        <td><%= escola["situacaoFuncionamentoTxt"] =%></td>
+                        <td><%= escola["dependenciaAdministrativaTxt"] =%></td>
+                      </tr>
+                  <% end %>
                 </tbody>
               </table>
               <%= paginate @paginacao %><br>
