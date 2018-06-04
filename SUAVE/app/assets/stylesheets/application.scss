@@ -13,6 +13,9 @@
  *= require_self
  *= require_tree .
  */
+
+@import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
+
 body {
   background-image: asset-data-url('background.jpg');
   background-repeat: repeat;
@@ -57,10 +60,6 @@ body a:hover{
   line-height: 25px !important;
 }
 
-.btn-login {
-  padding: 10px !important;
-}
-
 footer {
   position: fixed;
   left: 0;
@@ -76,7 +75,12 @@ footer {
 }
 
 .btn-login {
+  padding: 10px !important;
+}
+
+.btn-form {
   width: 100% !important;
+  margin-bottom: 5px !important;
 }
 
 .new_user {
@@ -89,7 +93,7 @@ footer {
 
 .login-right {
   float: right;
-  margin: 7px 0 7px 0;
+  margin: 7px 0 7px 10px;
 }
 
 p.login-text {
