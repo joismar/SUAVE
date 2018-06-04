@@ -10,14 +10,9 @@
           .field
             = f.email_field :email, autocomplete: "email", class: "form-control login", placeholder: "Email"
           .field
-            = f.label :password
-            - if @minimum_password_length
-              .alert.alert-warning.pass.text-center role="alert"
-                | Mínimo #{@minimum_password_length} caracteres
-            br
             = f.password_field :password, autocomplete: "off", class: "form-control login", placeholder: "Senha"
           .field
             = f.password_field :password_confirmation, autocomplete: "off", class: "form-control login", placeholder: "Confirmar senha"
           .actions
-            = f.submit "Sign up", class: "btn btn-danger btn-login"
+            = f.submit "Cadastrar-se", class: "btn btn-danger btn-form"
         = render "devise/shared/links"
