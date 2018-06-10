@@ -31,13 +31,16 @@
     </div>
     <div class="jumbotron sidebar col-md-3">
       <h3>Avaliação:</h3>
+      <% soma, cont = 0, 0 %>
         <% @avaliacoes.each do |avaliacao| %>
           <% if (avaliacao.idEscola).to_i == (@informacao["cod"]).to_i %>
-          <% nota = avaliacao.nota %>
-            <h3><%= nota =%></h3>
+          <% soma = soma + avaliacao.nota %>
+          <% cont = cont + 1 %>
 
           <%end%>
         <%end%>
+
+        <h3><%= (soma/cont) =%></h3>
 
         <%= link_to controller: "reviews", action: "new", id_escola: @informacao["cod"], nome_escola: @informacao["nome"] do %>
           <%= content_tag :span, "Avaliar Escola", :class => "btn btn-danger" %>
