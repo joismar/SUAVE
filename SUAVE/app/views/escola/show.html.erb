@@ -26,16 +26,19 @@
           </tbody>
         </table>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7903.796508627612!2d<%= @informacao["longitude"] %>!3d<%= @informacao["latitude"] %>!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1526952789725" width="600" height="450" frameborder="0" style="border:0" align="center" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7903.796508627612!2d<%= @informacao["longitude"] %>!3d<%= @informacao["latitude"] %>!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1526952789725" width="730" height="300" frameborder="0" style="border:0" align="center" allowfullscreen></iframe>
       </div>
     </div>
     <div class="jumbotron sidebar col-md-3">
       <h3>Avaliação:</h3>
-      <% soma, cont = 0, 0 %>
+      <% soma, cont = 0, 0
+         coments = [] %>
         <% @avaliacoes.each do |avaliacao| %>
           <% if (avaliacao.idEscola).to_i == (@informacao["cod"]).to_i %>
           <% soma = soma + avaliacao.nota %>
           <% cont = cont + 1 %>
+
+          <% coments.push(avaliacao.comentario) %>
 
           <%end%>
         <%end%>
@@ -45,7 +48,13 @@
         <%= link_to controller: "reviews", action: "new", id_escola: @informacao["cod"], nome_escola: @informacao["nome"] do %>
           <%= content_tag :span, "Avaliar Escola", :class => "btn btn-danger" %>
         <% end %>
-      </div>
+    </div>
+    <div class="jumbotron sidebar col-md-3">
+      <h3>Comentátios:</h3>
+
+      <% coments.each do |comentar| %>
+        <%= comentar =%> <br/>
+      <% end %>
     </div>
   </div>
 </div>
