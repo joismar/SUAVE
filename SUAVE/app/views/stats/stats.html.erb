@@ -1,0 +1,19 @@
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron">
+        <h3>Estatísticas</h3>
+
+        <% info = [["Media ENEM", @brasil["enemMediaGeral"]], ["Computadores", @brasil["computadores"]]] %>
+
+        <p><%= bar_chart [name: "Brasil", data: @brasil] %></p>
+        <p><%= bar_chart [name: "ENEM", data: info] %></p>
+
+        <p><%= column_chart Review.group(:nota).count %></p>
+        <p><%= pie_chart Review.group(:nota).count %></p>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

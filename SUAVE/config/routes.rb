@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/escola/:id' => "escola#show"
   get "sobre", to: "sobre#sobre"
   get "escola", to: "escola#escola"
+  get "stats", to: "stats#stats"
   devise_for :users, :controllers => { omniauth_callbacks: "users/omniauth_callbacks", registrations: 'users/registrations' }
 
   #contatos

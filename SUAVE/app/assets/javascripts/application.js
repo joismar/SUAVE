@@ -10,9 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require Chart.bundle
-//= require chartkick
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require highcharts
+//= require chartkick
 //= require_tree .
