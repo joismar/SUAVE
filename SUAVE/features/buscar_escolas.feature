@@ -2,8 +2,7 @@
 # language: pt
 Funcionalidade: Buscar Escolas
 
-  @javascript
-  Cenário: Devo visualizar um erro caso pesquisar uma escola sem haver digitado nada
+  Cenário: Devo visualizar uma lista de escolas ao pesquisar alguma escola
     Dado que eu estou na página escolas
-    Quando clicar no botão "Buscar Escola"
-    Então devo ver a mensagem "Preencha este campo."
+    Quando eu preencher o campo de pesquisa de escolas com "escola educador paulo freire"
+    Então devo ver a mensagem "Lista de Escolas"

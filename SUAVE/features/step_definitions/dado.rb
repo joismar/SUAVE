@@ -13,3 +13,7 @@ end
 Dado /^que eu estou na página de login$/ do
   visit(new_user_session_path)
 end
+
+Dado /^que eu estou na página de cadastro$/ do
+  visit(new_user_registration_path)
+end

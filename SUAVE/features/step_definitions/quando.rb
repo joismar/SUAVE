@@ -4,7 +4,7 @@ Quando /^clicar no botão "(.*?)"$/ do |botao|
 end
 
 Quando /^clicar no link "(.*?)"$/ do |link|
-  click_link(link)
+  find_link(link).click
   save_and_open_page
 end
 
