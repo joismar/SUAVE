@@ -67,6 +67,7 @@ GEM
     capybara-webkit (1.15.0)
       capybara (>= 2.3, < 4.0)
       json
+    chartkick (2.3.5)
     codemirror-rails (5.16.0)
       railties (>= 3.0, < 6.0)
     coderay (1.1.2)
@@ -328,6 +329,7 @@ DEPENDENCIES
   byebug
   capybara
   capybara-webkit
+  chartkick
   coffee-rails (~> 4.2)
   cucumber-rails
   database_cleaner
