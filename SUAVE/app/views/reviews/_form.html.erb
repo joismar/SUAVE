@@ -23,15 +23,16 @@
 
   <div class="field">
     <%= form.label :nota %>
-    <%= form.number_field :nota, id: :review_nota %>
+    <%= form.select :nota, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'] %>
+
   </div>
 
   <div class="field">
     <%= form.label :comentario %>
-    <%= form.text_area :comentario, id: :review_comentario %>
+    <%= form.text_area :comentario, id: :review_comentario, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Enviar avaliação", class: "btn btn-danger btn-form" %>
   </div>
 <% end %>

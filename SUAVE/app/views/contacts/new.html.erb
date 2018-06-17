@@ -5,25 +5,15 @@
         <div align="left">
           <h3>Envie-nos uma mensagem!</h3>
           <%= form_for @contact do |f| %>
-            <%= f.label :name %><br>
-            <%= f.text_field :name, required: true %>
-
-            <br><br>
-
-            <%= f.label :email %><br>
-            <%= f.email_field :email, required: true %>
-
-            <br><br>
-
-            <%= f.label :message %><br>
-            <%= f.text_area :message, required: true %>
+            <%= f.text_field :name, required: true, class: "form-control login", placeholder: "Nome" %>
+            <%= f.email_field :email, required: true, class: "form-control login", placeholder: "Email" %>
+            <%= f.text_area :message, required: true, class: "form-control login", placeholder: "Mensagem" %>
 
             <div class= "hidden">
               <%= f.label :nickname %><br>
               <%= f.text_field :nickname, hint: "Deixe esse campo em branco." %>
             </div>
-            <br><br>
-            <%= f.submit 'Enviar', class: "button" %>
+            <%= f.submit "Enviar", class: "btn btn-danger btn-form" %>
           <% end %>
       </div>
     </div>
