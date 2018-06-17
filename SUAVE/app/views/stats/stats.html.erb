@@ -2,15 +2,28 @@
   <div class="row">
     <div class="col-md-12">
       <div class="jumbotron">
-        <h3>Estatísticas</h3>
+        <h2>Estatísticas</h2>
 
-        <% info = [["Media ENEM", @brasil["enemMediaGeral"]], ["Computadores", @brasil["computadores"]]] %>
+        <% brasil = [["", @brasil["enemMediaGeral"]]] %>
+        <% norte = [["", @norte["enemMediaGeral"]]] %>
+        <% nordeste = [["", @nordeste["enemMediaGeral"]]] %>
+        <% centro = [["", @centro["enemMediaGeral"]]] %>
+        <% sudeste = [["", @sudeste["enemMediaGeral"]]] %>
+        <% sul = [["", @sul["enemMediaGeral"]]] %>
 
+        <h3>Média Geral ENEM</h3>
+        <p><%= column_chart [{name: "Brasil", data: brasil},
+                             {name: "Norte", data: norte},
+                             {name: "Nordeste", data: nordeste},
+                             {name: "Centro-Oeste", data: centro},
+                             {name: "Sudeste", data: sudeste},
+                             {name: "Sul", data: sul},] %></p>
+
+        <!--
         <p><%= bar_chart [name: "Brasil", data: @brasil] %></p>
-        <p><%= bar_chart [name: "ENEM", data: info] %></p>
-
-        <p><%= column_chart Review.group(:nota).count %></p>
+        <p><%= bar_chart Review.group(:nota).count %></p>
         <p><%= pie_chart Review.group(:nota).count %></p>
+        -->
 
         </ul>
       </div>
