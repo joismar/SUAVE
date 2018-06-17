@@ -33,21 +33,28 @@
       <h3>Avaliação:</h3>
       <% soma, cont = 0, 0
          coments = [] %>
-        <% @avaliacoes.each do |avaliacao| %>
-          <% if (avaliacao.idEscola).to_i == (@informacao["cod"]).to_i %>
+      <% @avaliacoes.each do |avaliacao| %>
+        <% if (avaliacao.idEscola).to_i == (@informacao["cod"]).to_i %>
           <% soma = soma + avaliacao.nota %>
           <% cont = cont + 1 %>
 
           <% coments.push(avaliacao.comentario) %>
 
-          <%end%>
         <%end%>
+      <%end%>
 
-        <h3><%= (soma/cont) =%></h3>
+      <% if cont == 0 %>
 
-        <%= link_to controller: "reviews", action: "new", id_escola: @informacao["cod"], nome_escola: @informacao["nome"] do %>
-          <%= content_tag :span, "Avaliar Escola", :class => "btn btn-danger" %>
-        <% end %>
+        <p>Sem avaliação</p>
+        <br />
+      <%else %>
+
+        <h3><%= (soma/cont) %></h3>
+      <%end%>
+
+      <%= link_to controller: "reviews", action: "new", id_escola: @informacao["cod"], nome_escola: @informacao["nome"] do %>
+        <%= content_tag :span, "Avaliar Escola", :class => "btn btn-danger" %>
+      <% end %>
     </div>
     <div class="jumbotron sidebar col-md-3">
       <h3>Comentátios:</h3>
