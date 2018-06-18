@@ -2,7 +2,7 @@
 
 Projeto da disciplina de Engenharia de Software (IF977), ofertada no curso de Sistemas de Informação do Centro de Informática, UFPE.
 
-Screencast do app: https://youtu.be/t95J5JqdYRg
+Screencast do app: https://youtu.be/Hm9otBO7d7Y
 
 Link do app no Heroku: https://sisuave.herokuapp.com/
 
