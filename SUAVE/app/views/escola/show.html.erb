@@ -1,3 +1,23 @@
+<script>
+    $(document).ready(function() {
+        $("#content div").hide(); // Initially hide all content
+        $("#tabs li:first").attr("id","current"); // Activate first tab
+        $("#content div:first").fadeIn(); // Show first tab content
+        $('#tabs li a').click(function(e) {
+            e.preventDefault();
+            if ($(this).attr("id") == "current"){ //detection for current tab
+                return
+            }
+            else{
+                $("#content div").hide(); //Hide all content
+                $("#tabs li").attr("id",""); //Reset id's
+                $(this).parent().attr("id","current"); // Activate this
+                $( $(this).attr('href')).fadeIn(); // Show content for current tab
+            }
+        });
+    });
+</script>
+
 <div class="container theme-showcase" role="main">
   <div class="row">
     <div class="col-md-9">
@@ -6,29 +26,101 @@
         <table align="center" class="table">
           <thead>
           <tr>
-            <th>Português &emsp;</th>
-            <th>Matematica &emsp;</th>
-            <th>Humanas &emsp;</th>
-            <th>Naturais &emsp;</th>
-            <th>Redação &emsp;</th>
+            <th>Funcionamento &emsp;</th>
+            <th>Administração &emsp;</th>
+            <th>Localização &emsp;</th>
+            <th>Município &emsp;</th>
+            <th>Estado &emsp;</th>
             <th>Endereço &emsp;</th>
           </tr>
           </thead>
           <tbody>
             <tr>
-              <td><%= @informacao["enemPortugues"] =%></td>
-              <td><%= @informacao["enemMatematica"] =%></td>
-              <td><%= @informacao["enemHumanas"] =%></td>
-              <td><%= @informacao["enemNaturais"] =%></td>
-              <td><%= @informacao["enemRedacao"] =%></td>
+              <td><%= @informacao["situacaoFuncionamentoTxt"] =%></td>
+              <td><%= @informacao["dependenciaAdministrativaTxt"] =%></td>
+              <td><%= @informacao["tipoLocalizacaoTxt"] =%></td>
+              <td><%= @informacao["nomeMunicipio"] =%></td>
+              <td><%= @informacao["siglaUf"] =%></td>
               <td><%= @informacao["endereco"] =%></td>
             </tr>
           </tbody>
         </table>
+      </div>
 
+      <div class="jumbotron">
+        <ul id="tabs">
+          <li><a href="#tab1">Notas do ENEM</a></li>
+          <li><a href="#tab2">Infraestrutura</a></li>
+          <li><a href="#tab3">Equipementos</a></li>
+          <li><a href="#tab4">Mais</a></li>
+        </ul>
+        <div class="div-em-colunas">
+          <div id="content">
+            <div id="tab1">
+              <tbody>
+              <tr>
+                <td><b>Português:</b> <%= @informacao["enemPortugues"].round(2) =%></td><br>
+                <td><b>Matemática:</b> <%= @informacao["enemMatematica"].round(2) =%></td><br>
+                <td><b>Humanas:</b> <%= @informacao["enemHumanas"].round(2) =%></td><br>
+                <td><b>Naturais:</b> <%= @informacao["enemNaturais"].round(2) =%></td><br>
+                <td><b>Redação:</b> <%= @informacao["enemRedacao"].round(2) =%></td><br>
+                <td><b>Média Geral:</b> <%= @informacao["enemMediaGeral"].round(2) =%></td>
+              </tr>
+              </tbody>
+            </div>
+            <div id="tab2">
+              <tr>
+                <td><b>Sala da Diretoria:</b> <%= @informacao["salaDiretoria"] =%></td><br>
+                <td><b>Sala dos Professores:</b> <%= @informacao["salaProfessores"] =%></td><br>
+                <td><b>Laboratório de Informática:</b> <%= @informacao["laboratorioInformatica"] =%></td><br>
+                <td><b>Laboratório de Ciências:</b> <%= @informacao["laboratorioCiencias"] =%></td><br>
+                <td><b>Biblioteca:</b> <%= @informacao["biblioteca"] =%></td><br>
+                <td><b>Sala de Leitura:</b> <%= @informacao["salaLeitura"] =%></td><br>
+                <td><b>Parque:</b> <%= @informacao["parqueInfantil"] =%></td><br>
+                <td><b>Banheiro:</b> <%= @informacao["sanitarioDentroPredio"] =%></td><br>
+                <td><b>Almoxarifado:</b> <%= @informacao["almoxarifado"] =%></td><br>
+                <td><b>Auditório:</b> <%= @informacao["auditorio"] =%></td><br>
+                <td><b>Área Verde:</b> <%= @informacao["areaVerde"] =%></td><br>
+                <td><b>Laboratório de Ciências:</b> <%= @informacao["laboratorioCiencias"] =%></td><br>
+                <td><b>Laboratório de Ciências:</b> <%= @informacao["laboratorioCiencias"] =%></td><br>
+                <td><b>Refeitório:</b> <%= @informacao["refeitorio"] =%></td><br>
+                <td><b>Cozinha:</b> <%= @informacao["cozinha"] =%></td>
+              </tr>
+            </div>
+            <div id="tab3">
+              <tr>
+                <td><b>Computadores:</b> <%= @informacao["computadores"] =%></td><br>
+                <td><b>Internet:</b> <%= @informacao["internet"] =%></td><br>
+                <td><b>Televisores:</b> <%= @informacao["televisores"] =%></td><br>
+                <td><b>Vídeo Cassete:</b> <%= @informacao["videoCassetes"] =%></td><br>
+                <td><b>DVD:</b> <%= @informacao["dvds"] =%></td><br>
+                <td><b>Parabólicas:</b> <%= @informacao["parabolicas"] =%></td><br>
+                <td><b>Copiadoras:</b> <%= @informacao["copiadoras"] =%></td><br>
+                <td><b>Retroprojetores:</b> <%= @informacao["retroprojetores"] =%></td><br>
+                <td><b>Impressoras:</b> <%= @informacao["impressoras"] =%></td><br>
+                <td><b>Aparelho de som:</b> <%= @informacao["impressoras"] =%></td><br>
+                <td><b>Datashow:</b> <%= @informacao["datashows"] =%></td><br>
+                <td><b>Fax:</b> <%= @informacao["fax"] =%></td>
+              </tr>
+            </div>
+            <div id="tab4">
+              <tr>
+                <td><b>Funcionários:</b> <%= @informacao["funcionarios"] =%></td><br>
+                <td><b>Alimentação:</b> <%= @informacao["alimentacao"] =%></td><br>
+                <td><b>Atividade complementar:</b> <%= @informacao["atividadeComplementar"] =%></td><br>
+                <td><b>Nível socioeconômico:</b> <%= @informacao["socioEconomico"] =%></td>
+              </tr>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jumbotron">
+        <h3>Localização:</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7903.796508627612!2d<%= @informacao["longitude"] %>!3d<%= @informacao["latitude"] %>!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1526952789725" width="730" height="300" frameborder="0" style="border:0" align="center" allowfullscreen></iframe>
       </div>
     </div>
+
     <div class="jumbotron sidebar col-md-3">
       <h3>Avaliação:</h3>
       <% soma, cont = 0, 0
