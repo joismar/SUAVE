@@ -26,12 +26,12 @@
         <table align="center" class="table">
           <thead>
           <tr>
-            <th>Funcionamento &emsp;</th>
-            <th>Administração &emsp;</th>
-            <th>Localização &emsp;</th>
-            <th>Município &emsp;</th>
-            <th>Estado &emsp;</th>
-            <th>Endereço &emsp;</th>
+            <th>Funcionamento</th>
+            <th>Administração</th>
+            <th>Localização</th>
+            <th>Município</th>
+            <th>Estado</th>
+            <th>Endereço</th>
           </tr>
           </thead>
           <tbody>
@@ -48,11 +48,11 @@
       </div>
 
       <div class="jumbotron">
-        <ul id="tabs">
-          <li><a href="#tab1">Notas do ENEM</a></li>
-          <li><a href="#tab2">Infraestrutura</a></li>
-          <li><a href="#tab3">Equipementos</a></li>
-          <li><a href="#tab4">Mais</a></li>
+        <ul class="nav nav-tabs nav-justified" id="tabs">
+          <li class="nav-item active"><a data-toggle="tab" href="#tab1">Notas do ENEM</a></li>
+          <li class="nav-item"><a data-toggle="tab" href="#tab2">Infraestrutura</a></li>
+          <li class="nav-item"><a data-toggle="tab" href="#tab3">Equipementos</a></li>
+          <li class="nav-item"><a data-toggle="tab" href="#tab4">Mais</a></li>
         </ul>
         <div class="div-em-colunas">
           <div id="content">
@@ -70,27 +70,27 @@
             </div>
             <div id="tab2">
               <tr>
-                <td><b>Sala da Diretoria:</b> <%= @informacao["salaDiretoria"] =%></td><br>
-                <td><b>Sala dos Professores:</b> <%= @informacao["salaProfessores"] =%></td><br>
-                <td><b>Laboratório de Informática:</b> <%= @informacao["laboratorioInformatica"] =%></td><br>
-                <td><b>Laboratório de Ciências:</b> <%= @informacao["laboratorioCiencias"] =%></td><br>
-                <td><b>Biblioteca:</b> <%= @informacao["biblioteca"] =%></td><br>
-                <td><b>Sala de Leitura:</b> <%= @informacao["salaLeitura"] =%></td><br>
-                <td><b>Parque:</b> <%= @informacao["parqueInfantil"] =%></td><br>
-                <td><b>Banheiro:</b> <%= @informacao["sanitarioDentroPredio"] =%></td><br>
-                <td><b>Almoxarifado:</b> <%= @informacao["almoxarifado"] =%></td><br>
-                <td><b>Auditório:</b> <%= @informacao["auditorio"] =%></td><br>
-                <td><b>Área Verde:</b> <%= @informacao["areaVerde"] =%></td><br>
-                <td><b>Laboratório de Ciências:</b> <%= @informacao["laboratorioCiencias"] =%></td><br>
-                <td><b>Laboratório de Ciências:</b> <%= @informacao["laboratorioCiencias"] =%></td><br>
-                <td><b>Refeitório:</b> <%= @informacao["refeitorio"] =%></td><br>
-                <td><b>Cozinha:</b> <%= @informacao["cozinha"] =%></td>
+                <td><b>Sala da Diretoria:</b> <%= @informacao["salaDiretoria"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Sala dos Professores:</b> <%= @informacao["salaProfessores"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Laboratório de Informática:</b> <%= @informacao["laboratorioInformatica"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Laboratório de Ciências:</b> <%= @informacao["laboratorioCiencias"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Biblioteca:</b> <%= @informacao["biblioteca"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Sala de Leitura:</b> <%= @informacao["salaLeitura"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Parque:</b> <%= @informacao["parqueInfantil"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Banheiro:</b> <%= @informacao["sanitarioDentroPredio"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Almoxarifado:</b> <%= @informacao["almoxarifado"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Auditório:</b> <%= @informacao["auditorio"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Área Verde:</b> <%= @informacao["areaVerde"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Laboratório de Ciências:</b> <%= @informacao["laboratorioCiencias"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Laboratório de Ciências:</b> <%= @informacao["laboratorioCiencias"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Refeitório:</b> <%= @informacao["refeitorio"] ? "SIM" : "NÃO" =%></td><br>
+                <td><b>Cozinha:</b> <%= @informacao["cozinha"] ? "SIM" : "NÃO" =%></td>
               </tr>
             </div>
             <div id="tab3">
               <tr>
                 <td><b>Computadores:</b> <%= @informacao["computadores"] =%></td><br>
-                <td><b>Internet:</b> <%= @informacao["internet"] =%></td><br>
+                <td><b>Internet:</b> <%= @informacao["internet"] ? "SIM" : "NÃO" =%></td><br>
                 <td><b>Televisores:</b> <%= @informacao["televisores"] =%></td><br>
                 <td><b>Vídeo Cassete:</b> <%= @informacao["videoCassetes"] =%></td><br>
                 <td><b>DVD:</b> <%= @informacao["dvds"] =%></td><br>
@@ -106,7 +106,7 @@
             <div id="tab4">
               <tr>
                 <td><b>Funcionários:</b> <%= @informacao["funcionarios"] =%></td><br>
-                <td><b>Alimentação:</b> <%= @informacao["alimentacao"] =%></td><br>
+                <td><b>Alimentação:</b> <%= @informacao["alimentacao"] ? "SIM" : "NÃO" =%></td><br>
                 <td><b>Atividade complementar:</b> <%= @informacao["atividadeComplementar"] =%></td><br>
                 <td><b>Nível socioeconômico:</b> <%= @informacao["socioEconomico"] =%></td>
               </tr>

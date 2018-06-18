@@ -6,6 +6,7 @@
   float: right;
 }
 
+/*
 #tabs {overflow: hidden;width: 100%;margin: 0;padding: 0;list-style: none;}
 #tabs li {float: left;margin: 0 .5em 0 0;}
 #tabs a {position: relative;background: #aaaaaa;padding: 0.7em 3em;float: left;	text-decoration: none;color: #fff;font-size: 13px;font-weight: bold;}
@@ -15,10 +16,15 @@
 #tabs #current a {background: #d9534f;	z-index: 3;color: #fff;}
 #tabs #current a::after {background: #d9534f;z-index: 3;color: #fff;}
 #content {position: relative;z-index: 2;}
+*/
 
 .div-em-colunas {
   -webkit-column-count:2; /* Chrome, Safari, Opera */
   -moz-column-count:2;    /* Firefox */
   column-count:2;         /* padrão */
-  padding-top: 20px;
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }

@@ -25,16 +25,12 @@ body {
 body a{
   color: #467E7F;
   text-decoration: none;
-  padding: 0 5px;
-  border-radius: 5px;
 }
 
 body a:hover{
-  color: white;
-  text-decoration: none;
-  background: #467E7F;
-  padding: 0 5px;
-  border-radius: 5px;
+  color: rgb(55, 98, 99);
+  text-decoration: underline;
+  background-color: transparent;
 }
 
 .container.theme-showcase {
