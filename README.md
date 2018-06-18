@@ -2,9 +2,7 @@
 
 Projeto da disciplina de Engenharia de Software (IF977), ofertada no curso de Sistemas de Informação do Centro de Informática, UFPE.
 
-Screencast do app: https://youtu.be/Hm9otBO7d7Y
-
-Link do app no Heroku: https://sisuave.herokuapp.com/
+[Screencast](https://youtu.be/Hm9otBO7d7Y) | [Heroku](https://sisuave.herokuapp.com/) | [Apresentação](https://docs.google.com/presentation/d/1gvkGKQgSjJOSEZb-a05-3bVScOOv8iBm667pkqGM4lY/edit?usp=sharing)
 
 #### Justificativa
 Diante da dificuldade de acesso a informações necessárias para avaliar a qualidade do ensino, resolvemos criar uma aplicação para dispor de forma clara e objetiva dados referentes às instituições escolares de todo o Brasil, buscando oferecer um recurso onde a população possa descobrir mais sobre esses estabelecimentos e participar diretamente da construção desse conhecimento.
