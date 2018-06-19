@@ -1,33 +1,44 @@
-<p id="notice"><%= notice %></p>
+<div class="container theme-showcase" role="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron pesquisa">
 
-<h1>Reviews</h1>
+        <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Idescola</th>
-      <th>Nomeescola</th>
-      <th>Nota</th>
-      <th>Comentario</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <h3>Minhas Avaliações</h3>
+        <div class="table-responsive">
+          <table align="center" class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>Escola</th>
+                <th>Nota</th>
+                <th>Comentario</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
 
-  <tbody>
-    <% @reviews.each do |review| %>
-      <tr>
-        <td><%= review.idEscola %></td>
-        <td><%= review.nomeEscola %></td>
-        <td><%= review.nota %></td>
-        <td><%= review.comentario %></td>
-        <td><%= link_to 'Show', review %></td>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
-        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+            <tbody>
+              <% @reviews.each do |review| %>
+                <% if review.user_id == current_user.id %>
+                  <tr>
+                    <td><%= review.nomeEscola %></td>
+                    <td><%= review.nota %></td>
+                    <td><%= review.comentario %></td>
+                    <td><%= link_to 'Show', review %></td>
+                    <td><%= link_to 'Edit', edit_review_path(review) %></td>
+                    <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <%end%>
+              <% end %>
+            </tbody>
+          </table>
 
-<br>
+          <br>
 
-<%= link_to 'New Review', new_review_path %>
+          <!--%= link_to 'New Review', new_review_path %-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
