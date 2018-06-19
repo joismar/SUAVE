@@ -23,6 +23,7 @@
 |Criação de testes TDD E BDD			 | Hugo e Joismar|
 |Ajustes finais no front-end da aplicação	 | Joismar       |
 |Elaborar um vídeo no formato screencast	 | João e Jean   |
+|Adicionada área "Avaliações"	 | Hugo   |
 
 #### O que não foi feito
 |					  Ação | Responsável|
