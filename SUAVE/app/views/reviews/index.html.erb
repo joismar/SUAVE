@@ -18,8 +18,10 @@
             </thead>
 
             <tbody>
+              <% cont = 0 %>
               <% @reviews.each do |review| %>
                 <% if review.user_id == current_user.id %>
+                  <% cont = cont + 1 %>
                   <tr>
                     <td><%= review.nomeEscola %></td>
                     <td><%= review.nota %></td>
@@ -32,6 +34,11 @@
               <% end %>
             </tbody>
           </table>
+          <% if cont == 0 %>
+
+            <p>Sem avaliações</p>
+            <br />
+          <%end%>
 
           <br>
 

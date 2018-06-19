@@ -41,6 +41,7 @@
                   <p class="login-text">Bem-vindo:</p>
                   <p class="login-email-text"><strong><%= current_user.name %></strong></p>
                 </div>
+                <li><%= link_to reviews_path, :class => 'btn-login' do %><button type="button" class="btn btn-danger">Avaliações</button><% end %></li>
                 <li><%= link_to edit_user_registration_path, :class => 'btn-login' do %><button type="button" class="btn btn-danger">Editar perfil</button><% end %></li>
                 <li><%= link_to destroy_user_session_path, method: :delete, :class => 'btn-login' do %><button type="button" class="btn btn-danger">Sair</button><% end %></li>
               <% else %>
