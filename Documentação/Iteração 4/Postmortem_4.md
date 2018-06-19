@@ -31,7 +31,7 @@
 
 #### Planejamentos futuros
 |			 		    Ação |
-|:-----------------------------------------------:|
+|:-----------------------------------------------|
 |Atualizar base de dados|
 |Melhorar estrutura de avaliações|
 |Incluir faculdades e universidades|
